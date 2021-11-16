@@ -31,6 +31,10 @@ header {
     width: 100%;
 }
 
+.logo a {
+    display: inline-block;
+}
+
 .logo img {
     width: 80%;
 }
