@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "shrikhand";
+    src: url("../fonts/shrikhand/Shrikhand-Regular.woff");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/roboto-v29-latin-regular.woff");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Section 1 : Logo + Ville */
+header {
+    padding: 30px;
+    width: 100%;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #F2F2F2;
+    height: 15px;
+    margin-top: 20px;
+}
+
+/* Section 2 : Réservez & Fonctionnement */
+.fonction {
+    padding: 20px;
+}
+
+
+/* Section 3 : Restaurants */
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding-bottom: 7px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FFFF;
+    border-radius: 15px;
+}
+
+.card img{
+    display: inline-block;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    padding-left: 10px;
+    line-height: 10px;
+    color: #000 ;
+}
+
+/* Section 4 : Footer */
+
+footer {
+    background-color: #000;
+    padding: 20px 0 20px 0;
+    margin-right: 0;
+}
+
+footer h2 {
+    font-family: "shrikhand", sans-serif;
+    font-size: 25px;
+    color: #FFFF;
+    padding-left: 25px;
+}
+
+footer ul {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+footer li {
+    line-height: 20px;
+}
+
+.white, 
+footer a {
+    color: #FFFF;
+}
