@@ -1,4 +1,4 @@
-*OC - Project 03*
+*OC - Projet 03*
 
 Création du site **ohmyfood** 
  
