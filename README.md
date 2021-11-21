@@ -1,4 +1,4 @@
-Création du site **ohmyfood** Paris 
+Création du site **ohmyfood** 
  
 **Identité** : *ohmyfood!* est une entreprise de commande de repas en ligne. 
 
