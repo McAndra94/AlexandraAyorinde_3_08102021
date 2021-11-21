@@ -1,17 +1,13 @@
 @media screen and (max-width:1024px) {
-    .fa-search {
-        display: none;
-    }
+    
 }
 
 @media screen and (max-width:768) {
-    .fa-search {
-        display: none;
-    }
+    
 }
 
 @media screen and (min-width:414px) {
-    .fa-search {
-        display: none;
+    .reserve h2 {    
+        padding: 0 55px 0 55px;
     }
-}
+}   

@@ -3,56 +3,164 @@
     src: url("../fonts/shrikhand/Shrikhand-Regular.woff");
     font-style: normal;
     font-weight: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: "roboto";
-    src: url("../fonts/roboto/roboto-v29-latin-regular.woff");
+    src: url("../fonts/roboto/Roboto-Regular.woff");
     font-style: normal;
     font-weight: normal;
-  }
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Thin.woff");
+    font-style: normal;
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Bold.woff");
+    font-style: normal;
+    font-weight: bold;
+}
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: "roboto", sans-serif;
-    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-/* Section 1 : Logo + Ville */
+/* Section 1 : Header Logo */
+
 header {
-    padding: 30px;
-    width: 100%;
+    font-family: "shrikhand", sans-serif;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    padding: 15px 0 5px 0;
+    box-shadow: 0 0px 10px 0px #606060;
+    margin-bottom: 5px;
 }
 
-.logo a {
-    display: inline-block;
-}
+/* Section 2 : Search & Réservez & Fonctionnement */
 
-.logo img {
-    width: 80%;
+main {
+    line-height: 25px;
 }
 
 .search-bar {
     display: flex;
-    align-items: center;
-    padding-top: 50px;
-    background-color: #F2F2F2;
-    height: 15px;
-    margin-top: 20px;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #E8E8E8;
 }
 
-/* Section 2 : Réservez & Fonctionnement */
+.search-box {
+    border: none;
+    background-color: #E8E8E8;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.search-bar i {
+    font-size: 20px;
+    height: 20px;
+    color: #000;
+}
+
+.reserve {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 40px 20px 40px 20px;
+}
+
+.reserve p {
+    font-size: 18px;
+    padding: 10px 0 25px 0;
+}
+
+.reserve button {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    color: #FFF;
+    border-radius: 25px;
+    width: 220px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px #B8B8B8;
+    font-size: 15px;
+}
+
+.reserve button:hover {
+    filter: brightness(115%);
+    box-shadow: 5px 15px 15px 5px #B8B8B8;
+}
+
 .fonction {
-    padding: 20px;
+    background-color: #FFF;
+    padding: 40px 20px 40px 0;
+    counter-reset: numbers;
 }
 
+.fonction h2 {
+    padding-left: 20px;
+}
+
+.fonction li {
+    background-color: #F6F6F6;
+    font-weight: bold;
+    border-radius: 18px;
+    width: 100%;
+    height: 70px;
+    padding: 25px;
+    margin: 20px 0 20px 0;
+    box-shadow: 0 5px 5px 2px #E8E8E8;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.fonction li::before {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    counter-increment: numbers;
+    content: counter(numbers);
+    background-color: #9356DC;
+    color: #FFFF;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    position: absolute;
+    left: -15px;
+}
+
+.fonction li:hover {
+    filter: brightness(105%);
+    box-shadow: 5px 5px 5px 5px #B8B8B8;
+}
+
+.fonction li i {
+    padding: 0 20px 0 10px;
+    color: #696969;
+    font-size: 17px;
+ }
 
 /* Section 3 : Restaurants */
 .restaurants {
@@ -60,17 +168,22 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #F2F2F2;
-    padding: 20px;
+    background-color: #F6F6F6;
+    padding: 40px 20px 40px 20px;
+}
+
+.restaurants h2 {
+    padding-bottom: 20px;
 }
 
 .card {
     margin-bottom: 20px;
-    padding-bottom: 7px;
+    padding-bottom: 15px;
     width: 100%;
     overflow: hidden;
     background-color: #FFFF;
     border-radius: 15px;
+    box-shadow: 0px 3px 3px 3px #EEEE;
 }
 
 .card img{
@@ -82,35 +195,60 @@ header {
 
 .card-text {
     padding-left: 10px;
-    line-height: 10px;
-    color: #000 ;
+    color: #000;
+}
+
+.card-text h3 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-text p {
+    font-weight: thin;
+    font-size: 18px;
 }
 
 /* Section 4 : Footer */
 
 footer {
-    background-color: #000;
-    padding: 20px 0 20px 0;
+    background-color: #353535;
+    margin-right: 0;
+}
+
+footer div {
+    padding: 20px;
     margin-right: 0;
 }
 
 footer h2 {
     font-family: "shrikhand", sans-serif;
-    font-size: 25px;
-    color: #FFFF;
-    padding-left: 25px;
+    font-size: 20px;
+    color: #F6F6F6;
+    padding-bottom: 10px;
 }
 
 footer ul {
     list-style: none;
-    padding-bottom: 20px;
+    font-size: 16px;
+    padding: 0;
+}
+
+footer ul i {
+    padding-right: 8px;
+    font-size: 12px;
 }
 
 footer li {
-    line-height: 20px;
+    display: list-item;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 15px 0;
 }
 
-.white, 
-footer a {
-    color: #FFFF;
+footer li a {
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+    font-weight: bold;
+    color: #F6F6F6;
 }
