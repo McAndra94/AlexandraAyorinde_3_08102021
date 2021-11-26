@@ -1,27 +1,27 @@
 @font-face {
     font-family: "shrikhand";
-    src: url("../fonts/shrikhand/Shrikhand-Regular.woff");
+    src: url("/assets/fonts/shrikhand/Shrikhand-Regular.woff");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "roboto";
-    src: url("../fonts/roboto/Roboto-Regular.woff");
+    src: url("/assets/fonts/roboto/Roboto-Regular.woff");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "roboto";
-    src: url("../fonts/roboto/Roboto-Thin.woff");
+    src: url("/assets/fonts/roboto/Roboto-Thin.woff");
     font-style: normal;
     font-weight: thin;
 }
 
 @font-face {
     font-family: "roboto";
-    src: url("../fonts/roboto/Roboto-Bold.woff");
+    src: url("/assets/fonts/roboto/Roboto-Bold.woff");
     font-style: normal;
     font-weight: bold;
 }
@@ -39,11 +39,70 @@ a {
     text-decoration: none;
 }
 
-/* Section 1 : Header Logo */
+/* Loading Spinner */
 
-header {
+.loading-spinner {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%; 
+    background-color: #FFF;
+    opacity: 0.8; 
+    animation: loading-spinner linear 2500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+.spinner-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 300px;
+    animation: spinner-box 1000ms linear infinite;
+}
+
+.spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 15px solid;
+    border-radius: 50%;
+}
+
+.spinner-purple {
+    border-color: #9356DC;
+}
+
+.spinner-mint {
+    border-color: #99E2D0;
+}
+
+.spinner-pink {
+    border-color: #FF79DA;
+}
+
+@keyframes spinner-box {
+    from {
+        transform: rotate(0turn) scale(1);
+    }
+    to {
+        transform: rotate(1turn) scale(0.2);
+    }
+}
+
+
+/* Section 1 : Header Logo */
+header h1 {
     font-family: "shrikhand", sans-serif;
-    font-size: 18px;
+    font-size: 38px;
     color: #000;
     text-align: center;
     padding: 15px 0 5px 0;
@@ -52,7 +111,6 @@ header {
 }
 
 /* Section 2 : Search & Réservez & Fonctionnement */
-
 main {
     line-height: 25px;
 }
@@ -105,6 +163,7 @@ main {
 .reserve button:hover {
     filter: brightness(115%);
     box-shadow: 5px 15px 15px 5px #B8B8B8;
+    transform: scale(1.1);
 }
 
 .fonction {
@@ -153,7 +212,8 @@ ol {
 
 .fonction li:hover {
     filter: brightness(105%);
-    box-shadow: 5px 5px 5px 5px #B8B8B8;
+    box-shadow: 2px 2px 5px 2px #B8B8B8;
+    background-color: #9356DC20;
 }
 
 .fonction li i {
@@ -161,6 +221,10 @@ ol {
     color: #696969;
     font-size: 17px;
  }
+
+ .fonction li i:hover {
+    color: #9356DC;
+}
 
 /* Section 3 : Restaurants */
 .restaurants {
@@ -176,6 +240,11 @@ ol {
     padding-bottom: 20px;
 }
 
+.resto a {
+    display: inline-block;
+    width: 100%;
+}
+
 .card {
     margin-bottom: 20px;
     padding-bottom: 15px;
@@ -184,6 +253,18 @@ ol {
     background-color: #FFFF;
     border-radius: 15px;
     box-shadow: 0px 3px 3px 3px #EEEE;
+    position: relative;
+}
+
+.card span {
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    color: #2b9f83;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #99E2D0;
+    border-radius: 2px;
 }
 
 .card img{
@@ -208,8 +289,52 @@ ol {
     font-size: 18px;
 }
 
-/* Section 4 : Footer */
+.empty-heart {
+    position: absolute;
+    bottom: 23px;
+    right: 25px;
+    font-size: 28px;
+    color: #000;
+}
 
+.colored-heart {
+    position: absolute;
+    bottom: 30px;
+    right: 31px;
+    font-size: 15px;
+    color: transparent;
+}
+
+.colored-heart:hover {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(1.95);
+    transition-duration: 1000ms;
+}
+
+.menu-card {
+    padding-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu-card img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-resto {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 25px 25px;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px 0 20px;
+}
+
+/* Section 4 : Footer */
 footer {
     background-color: #353535;
     margin-right: 0;
@@ -233,7 +358,7 @@ footer ul {
     padding: 0;
 }
 
-footer ul i {
+footer li i {
     padding-right: 8px;
     font-size: 12px;
 }

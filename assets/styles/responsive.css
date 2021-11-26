@@ -1,0 +1,17 @@
+/* Ordinateur */
+@media screen and (min-width:1024px) {
+    
+}
+
+/* Tablette */
+@media screen and (max-width:768) {
+    
+
+}
+
+/* Mobile */
+@media screen and (max-width:414px) {
+    .reserve h2 {    
+        padding: 0 55px 0 55px;
+    }
+}   
