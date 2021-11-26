@@ -126,6 +126,18 @@ padding: 50px 20px 50px 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden ;
+    animation-duration: 3000ms;
+    animation-delay: 0s;
+    animation-name: glissement;
+    animation-iteration-count: 1;
+    @keyframes glissement {
+    from {
+    margin-top: 100%;
+    }
+    to {
+    margin-top: 0%;
+    }
+    }
         h4 {
         font-size: 18px;
         }

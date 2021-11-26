@@ -152,6 +152,32 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-name: glissement;
+          animation-name: glissement;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes glissement {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes glissement {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 
 .menu .menu-description h4 {
@@ -173,7 +199,6 @@ main {
   left: 90%;
   right: 0;
   bottom: 25px;
-  display: relative;
 }
 
 /* Section 4 : Footer */
