@@ -12,7 +12,6 @@ a {
 }
 
 /* Loading Spinner */
-
 .loading-spinner {
     position: fixed;
     z-index: 1;
@@ -69,7 +68,6 @@ a {
         transform: rotate(1turn) scale(0.2);
     }
 }
-
 
 /* Section 1 : Header Logo */
 header h1 {

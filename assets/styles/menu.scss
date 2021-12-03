@@ -18,72 +18,76 @@ a {
 /* Section 1 : Header Logo + Arrow */
 header {
     h1 {
-    font-family: "shrikhand", sans-serif;
-    font-size: 38px;
-    color: #000;
-    text-align: center;
-    padding: 15px 0 5px 0;
-    box-shadow: 0 0px 10px 0px #606060;
+        font-family: "shrikhand", sans-serif;
+        font-size: 35px;
+        color: #000;
+        text-align: center;
+        padding: 15px 0 5px 0;
+        box-shadow: 0 0px 10px 0px #606060;
     }
     div {
-    display: inline-block;
-    justify-content: center;
-    position: absolute;
-    left: 5%;
-    top: 25px;
+        display: inline-block;
+        justify-content: center;
+        position: absolute;
+        left: 5%;
+        top: 25px;
         a {
-        font-size: 25px;
-        height: 20px;
-        color: #000;
+            font-size: 25px;
+            height: 20px;
+            color: #000;
         }
     }
 }
 
 /* Section 2 : Main & Restaurant */
 main {
-line-height: 25px;
-background-color: #F6F6F6;
+    line-height: 25px;
+    background-color: #F6F6F6;
+    width: 100%;
+    margin: 0;
 }
 
 .restaurant {
-display: flex;
-flex-direction: column;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     img {
-    height: 250px;
+        height: 250px;
+        object-fit: cover;
     }
     .resto-name {
-    background-color: #F6F6F6;
-    border-radius: 25px 25px 0 0;
-    width: 100%;
-    height: auto;
-    padding: 40px 20px 0 20px;
-    position: absolute;
-    top: 280px;
+        background-color: #F6F6F6;
+        border-radius: 25px 25px 0 0;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px 0 20px;
+        position: absolute;
+        top: 280px;
         h2 {
-        font-family: "shrikhand", sans-serif;
-        font-size: 25px;
-        color: #000;
+            font-family: "shrikhand", sans-serif;
+            font-size: 28px;
+            color: #000;
+            white-space: wrap;
         }
         .empty-heart {
-        position: absolute;
-        bottom: 2px;
-        right: 25px;
-        font-size: 28px;
-        color: #000;
+            position: absolute;
+            bottom: 2px;
+            right: 25px;
+            font-size: 28px;
+            color: #000;
         }
         .colored-heart {
-        position: absolute;
-        bottom: 8px;
-        right: 31px;
-        font-size: 15px;
-        color: transparent;
+            position: absolute;
+            bottom: 8px;
+            right: 31px;
+            font-size: 15px;
+            color: transparent;
             &:hover {
-            background-image: linear-gradient($pink, $purple);
-            background-clip: text;
-            -webkit-background-clip: text;
-            transform: scale(1.95);
-            transition-duration: 1000ms;
+                background-image: linear-gradient($pink, $purple);
+                background-clip: text;
+                -webkit-background-clip: text;
+                transform: scale(1.95);
+                transition-duration: 1000ms;
             }
         }
     }
@@ -91,107 +95,191 @@ width: 100%;
 
 /* Section 3 : Menu */
 .menu {
-padding: 50px 20px 50px 20px;
-    .entre .plat .dessert {
-    width: 100%;
-    }
+    padding: 50px 20px 50px 20px;
     .menu-set {
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    padding-bottom: 10px;
-    position: relative;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        padding: 20px 0 10px 0;
+        position: relative;
         &:after {
-        content: "";
-        width: 45px;
-        height: 4px;
-        background-color: $mint;
-        position: absolute;
-        left: 0;
-        bottom: 0;
+            content: "";
+            width: 45px;
+            height: 4px;
+            background-color: $mint;
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
     }
     .menu-description {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFF;
-    align-content: normal;
-    border-radius: 20px 20px;
-    width: auto;
-    height: 80px;
-    margin: 20px 0;
-    padding: 4%;
-    box-shadow: 0px 3px 3px 3px #EEEE;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden ;
-    animation-duration: 3000ms;
-    animation-delay: 0s;
-    animation-name: glissement;
-    animation-iteration-count: 1;
-    @keyframes glissement {
-    from {
-    margin-top: 100%;
-    }
-    to {
-    margin-top: 0%;
-    }
-    }
-        h4 {
-        font-size: 18px;
+        -webkit-transition-duration: 2s;
+        -o-transition-duration: 2s;
+        transition-duration: 2s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FFF;
+        align-content: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        border-radius: 20px 20px;
+        width: auto;
+        margin: 20px 0;
+        box-shadow: 0px 3px 3px 3px #EEEE;
+        animation-duration: 3000ms;
+        animation-delay: 0s;
+        animation-name: glissement;
+        animation-iteration-count: 1;
+        cursor: pointer;
+        @keyframes glissement {
+            from {
+                margin-top: 100%;
+            }
+            to {
+                margin-top: 0%;
+            }
         }
+        .menu-content {
+            position: inherit;
+            flex-direction: column;
+            padding: 5% 0 5% 5%;
+            white-space: nowrap;
+            h4 {
+                font-size: 18px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                &:active {
+                    overflow: visible;
+                    white-space: nowrap;
+                }
+            }
+            p {
+                font-size: 16px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 85%;
+                &:active {
+                    overflow: visible;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .menu-check {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            width: 0;
+            .fas {
+                color: #FFF;
+                font-size: 25px;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover .menu-content {
+            width: 60%;
+            white-space: initial;
+        }
+        &:hover .price {
+            position: relative;
+        }
+        &:hover .menu-check {
+            background-color: $mint;
+            width: 20%;
+            visibility: visible;
+            -webkit-transition: all .5s ease-in;
+            -o-transition: all .5s ease-in;
+            transition: all .5s ease-in;
+        }
+        &:hover .menu-check .fas {
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            -webkit-transform: rotate(-360deg);
+            -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            -webkit-transition-duration: 2s;
+            -o-transition-duration: 2s;
+            transition-duration: 2s;
+        }   
+        .price {
+            display: flex;
+            font-weight: bold;
+            font-size: 18px;
+            right: 15px;
+            position: absolute;
+            padding: 40px 15px 20px 15px;
+            &:active {
+                position: relative;
+            }
+        }        
+        
     }
-    .menu-content {
-    position: inherit;
-    }
-    .sub-title {
-    display: inline-block;
-    font-size: 15px;
-    width: 100%;
-    }
-    .price {
-    font-weight: bold;
-    left: 90%;
-    right: 0;
-    bottom: 25px;
-    display: relative;
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 30px 0 20px 0;
+        button {
+            background-image: linear-gradient($pink, $purple);
+            color: #FFF;
+            border-radius: 25px;
+            width: 200px;
+            height: 50px;
+            border: none;
+            box-shadow: 0px 4px 4px 0px #B8B8B8;
+            font-size: 15px;
+            &:hover {
+                filter: brightness(115%);
+                box-shadow: 5px 15px 15px 5px #B8B8B8;
+                transform: scale(1.1);
+            }
+        }
     }
 }
 
 /* Section 4 : Footer */
 footer {
-background-color: #353535;
-margin-right: 0;
-    div {
-    padding: 20px;
+    background-color: #353535;
     margin-right: 0;
+    div {
+        padding: 20px;
+        margin-right: 0;
     }
     h2 {
-    font-family: "shrikhand", sans-serif;
-    font-size: 20px;
-    color: #F6F6F6;
-    padding-bottom: 10px;
+        font-family: "shrikhand", sans-serif;
+        font-size: 20px;
+        color: #F6F6F6;
+        padding-bottom: 10px;
     }
     ul {
-    list-style: none;
-    font-size: 16px;
-    padding: 0;
-        li {
-        display: list-item;
         list-style: none;
-        margin: 0;
-        padding: 0 0 15px 0;
+        font-size: 16px;
+        padding: 0;
+        li {
+            display: list-item;
+            list-style: none;
+            margin: 0;
+            padding: 0 0 15px 0;
             a {
-            display: flex;
-            align-items: center;
-            line-height: 10px;
-            font-weight: bold;
-            color: #F6F6F6;
+                display: flex;
+                align-items: center;
+                line-height: 10px;
+                font-weight: bold;
+                color: #F6F6F6;
             }
             i {
-            padding-right: 8px;
-            font-size: 12px;
+                padding-right: 8px;
+                font-size: 12px;
             }
         }
     }

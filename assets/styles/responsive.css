@@ -1,28 +1,51 @@
 /* Ordinateur */
 @media screen and (min-width:1024px) {
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
     .menu {
-    flex-direction: row;
+        flex-direction: row;
+        margin-top: 60px;
+        position: relative;
     }
 
-    h2 {
-    font-size: 30px;
+    .restaurant img {
+        margin-right: -13%;
+        margin-left: -13%;
     }
-/*
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    .restaurant .resto-name {
+        width: 80%;
+    }
 
-    .entre .plat .dessert {
-    width: ;
-    justify-content: space-between;
-    }*/
+    .menu .menu-content {
+        padding: 2.5% 0 2.5% 2.5%;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .menu-content {
+        width: 100%;
+    }
+
+    footer h2,
+    footer ul li {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
 }
 
 /* Tablette */
-@media screen and (max-width:768px) {
-    
-
+@media screen and (max-width:768px) {      
+    .menu-content {
+        width: 100%;
+    }
 }
 
 /* Mobile */
