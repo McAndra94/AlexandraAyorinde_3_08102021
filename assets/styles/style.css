@@ -259,6 +259,13 @@ ol {
     font-size: 18px;
 }
 
+.hearts {
+    cursor: pointer;
+    position: relative;
+    bottom: 25px;
+    right: 5px;
+}
+
 .empty-heart {
     position: absolute;
     bottom: 23px;

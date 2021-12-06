@@ -78,7 +78,6 @@ main {
   font-family: "shrikhand", sans-serif;
   font-size: 28px;
   color: #000;
-  white-space: wrap;
 }
 
 .restaurant .resto-name .empty-heart {
